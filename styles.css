@@ -1,0 +1,74 @@
+/* Google Fonts "Inter"のLight 300をインポート */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+/* =================================== */
+/* 基本スタイル（主にスマートフォン用） */
+/* =================================== */
+body {
+    margin: 0;
+    padding: 10px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* ↓↓↓ ここの値を200pxに変更しました ↓↓↓ */
+    gap: 200px; /* 上下の要素間の距離を200pxに */
+}
+
+.photo-card {
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: scale(1.02);
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.artist-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: #555555;
+    font-size: 14px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    width: 100%;
+}
+
+
+/* =================================== */
+/* PC用のスタイル（画面幅が768px以上の場合に適用） */
+/* =================================== */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        padding: 0 40px;
+    }
+
+    .container a {
+        width: 30%;
+    }
+}
